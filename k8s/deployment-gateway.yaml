@@ -27,4 +27,4 @@ spec:
                       - name: spring.cloud.kubernetes.discovery.locator.enabled
                         value: "true"
                   ports:
-                      - containerPort: 8081
+                      - containerPort: 9090
