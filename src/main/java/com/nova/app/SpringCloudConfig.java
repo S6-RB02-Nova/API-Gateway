@@ -18,7 +18,7 @@ public class SpringCloudConfig {
         return builder.routes()
             .route(r -> r.path("/auth/**")
                 .filters(f -> f.filter(filter))
-                .uri("lb://authapi"))
+                .uri("lb://authapi:8081"))
             .build();
     }
 }
