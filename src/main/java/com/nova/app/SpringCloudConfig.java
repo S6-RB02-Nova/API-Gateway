@@ -19,6 +19,12 @@ public class SpringCloudConfig {
             .route(r -> r.path("/auth/**")
                 .filters(f -> f.filter(filter))
                 .uri("lb://authapi"))
+            .route(r -> r.path("/query/**")
+                .filters(f -> f.filter(filter))
+                .uri("lb://queryapi"))
+            .route(r -> r.path("/command/**")
+                .filters(f -> f.filter(filter))
+                .uri("lb://commandapi"))
             .build();
     }
 }
